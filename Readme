@@ -1,18 +1,1 @@
 
-[**Paper**]() | [**Project Page**]() | [**Model Weights**]() | [**Huggingface Demo**]() |
-
-
-*Figure 1) Graphic Abstract of Segement Any Architecture Facade (SAAF).*
-![img](assets/01.png)
-
-*Figure 2) Schematic diagram of the reference segmentation dataset.*
-![img](assets/05.png)
-
-*Figure 3) The pipeline of SAAF. Given the input image and text query, the multimodal LLM (e.g, LLaVA ) generates text output. The last-layer embedding for the <SEG> token is then decoded into the segmentation mask via the decoder..*
-![img](assets/06.png)
-
-*Figure 4) Segmentation results of SAAF on different datasets.*
-![img](assets/02.png)
-
-*Figure 5) SAAF performs wall and window segmentation based on semantic guidance.*
-![img](assets/03.png)
