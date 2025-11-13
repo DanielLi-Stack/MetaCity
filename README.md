@@ -19,22 +19,3 @@ MetaCity reframes design not as a linear task but as a negotiable process involv
 
 ![img](assets/06.png)
 
-
-## TODO List
-
-- [x] Release part of Segment-Any-Architecture-Facade dataset. 
-- [ ] Release Segment-Any-Architecture-Facade inference code and pretrain weights.
-- [ ] Upload Segment-Any-Architecture-Facade training dataset.
-- [ ] Release Segment-Any-Architecture-Facade code.
-
-
-
-## Inference
-
-```
-python Segment_Any_Architecture_Facade_Sample.py --dataset ArchiMetricsNet --batch_size 32  --color_configuration 0 --model_path ckpts/exp/model10000.pt --num_samples 64
-```
-## Train
-
-```
-python Segment_Any_Architecture_Facade_Train.py --dataset ArchiMetricsNet --batch_size 32  --color_configuration 0 
