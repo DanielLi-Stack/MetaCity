@@ -1,0 +1,50 @@
+/* app/globals.css — Minimal, compatible with Tailwind v4 */
+@import "tailwindcss";
+
+@keyframes pop {
+  0% { transform: scale(0.85); opacity: 0 }
+  60% { transform: scale(1.03); opacity: 1 }
+  100% { transform: scale(1); }
+}
+
+@keyframes slide {
+  0% { transform: translateY(-6px); opacity: 0 }
+  100% { transform: translateY(0); opacity: 1 }
+}
+
+/* 顶部进度条的微闪效果 */
+@keyframes shine {
+  0% { transform: translateX(-30%) }
+  100% { transform: translateX(130%) }
+}
+
+@keyframes sweep {
+  0%   { transform: translateX(-120%); }
+  50%  { transform: translateX(20%); }
+  100% { transform: translateX(160%); }
+}
+/* 简化版：去除未知的 `border-border` 与 `outline-ring/50` 工具类，
+   避免构建期 CssSyntaxError。你可以先用这个稳定版本跑通项目。 */
+
+:root {
+  /* 仅保留最基本的配色变量，避免引用不存在的 Token */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+}
+
+.dark {
+  --background: oklch(100% 0.00011 271.152);
+  --foreground: oklch(0% 0 0);
+}
+
+/* 基础样式：不使用 @apply 的自定义工具类，直接写原生 CSS，最稳 */
+html, body {
+  background: var(--background);
+  color: var(--foreground);
+  min-height: 100%;
+}
+
+/* 你仍可在组件里使用常规 Tailwind 工具类（如 p-6, rounded-2xl, shadow 等）。
+   若后续想恢复 shadcn 的主题 Token 写法，我们再逐步添加对应的 @theme 与颜色映射。 */
+
+   
